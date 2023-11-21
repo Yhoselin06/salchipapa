@@ -1,1 +1,116 @@
-1
+print("hola, querido usuario")
+print("este programa es para analizar la cantidad de agua que usted utiliza en su diario vivir")
+#preguntamos datos personales del usuario
+print("¿ingrese su nombre completo?")
+input("")
+print("¿cuantos años tiene usted?")
+input("")
+#aqui le damos variedad de opciones al usuario para su analisis
+print("MENÚ")
+print("Opción 1: aseo personal")
+print("Opción 2: Consumo de agua")
+print("Opción 3: Lavado de ropa")
+print("Opción 4: Agua para cocinar")
+print("Opción 5: Limpieza del hogar")
+print("Opción 6: Lavado de trastes")
+x=int(input("Elija una opción:"))
+if(x==1):
+    print("¿Cuántos minutos se demora en promedio para ducharse?")
+    #por cada minuto en la ducha se utiliza 20 litros de agua
+    tiempo_ducha=int(input(""))
+    print("¿Cuántas veces se duchan a la semana?")
+    cantidad_ducha=int(input(""))
+    print("¿Cuántos veces se lava los dientes al dia?")
+    lavado_dientes=int(input(""))
+    print("¿Cuántos litros de agua utiliza para el lavado de dientes?")
+    agua_dientes=int(input(""))
+    higiene_corporal=((tiempo_ducha*20)* cantidad_ducha)
+    higiene_bucal=((lavado_dientes*7)* agua_dientes)
+    aseo_personal=higiene_corporal + higiene_bucal
+    print("La cantidad de litros de agua que utiliza para ducharse a la semana es: ", higiene_corporal, "litros")
+    print("La cantidad de litros de agua que utiliza para lavarse los dientes a la semana es: ", higiene_bucal, "litros")
+    print("En conclusión, la cantidad de litros de agua que utiliza para su aseo personal a la semana es: ", aseo_personal, "litros")
+    if aseo_personal<1050:
+        print("¡MUY BIEN¡ ¡Eres muy responsable con el cuidado del agua¡")
+        print("¡FELICIDADES¡ ¡TE GANASTE UN PREMIO¡")
+    elif aseo_personal<1400:
+        print("hmmm...tienes que ser un poco mas responsable con el cuidado del agua")
+    elif aseo_personal>1400:
+        print("¡MAL¡ ¡NO ERES CUIDADOSO CON EL AGUA¡ pero te invitamos a participar a nuestra capacitación sobre el cudiado del agua")
+elif(x==2):
+    print("¿Cuántos litros de agua consume usted al dia?")
+    agua_beber=int(input(""))
+    if agua_beber>=4:
+        print("¡EXCELENTE¡ Eres una persona muy saludable, ¡sigue asi :)¡")
+        print("¡FELICIDADES¡ TE GANASTE UN PREMIO¡")
+    elif agua_beber<4:
+        print("hmmm....deberias hidratarte más, recuerda que tu salud es primero")
+elif(x==3):
+    print("¿Cuántas veces a la semana lavas tu ropa?")
+    cantidad_veces=int(input(""))
+    print("¿Cuántos litros utilizas para lavar tu ropa?")
+    cantidad_litros=int(input(""))
+    total_lavado=cantidad_veces * cantidad_litros
+    print("el total de litros que usas para lavar la ropa es: ", total_lavado, "litros")
+    if total_lavado<80:
+        print("¡GENIAL¡ ¡Haces un buen uso del agua¡")
+        print("FELICIDADES¡ ¡TE GANASTE UN PREMIO¡")
+    elif total_lavado<120:
+        print("esta bien la cantidad de agua que usas, pero bajale un poco xd")
+    elif total_lavado>120:
+        print("¡MAL¡ te invitamos a nuestra capacitación sobre el cuidado del agua")
+elif(x==4):
+    print("¿Cuántos litros de agua utiliza para la preparación del desayuno?")
+    agua_desayuno=int(input(""))
+    print("En total a la semana, ¿Cuántas veces desayuna?")
+    cantidad_desayuno=int(input(""))
+    print("¿Cuántas veces cocina el almuerzo a la semana?")
+    cantidad_almuerzo=int(input(""))
+    print("¿Cuántos litros de agua utiliza para cocinar el almuerzo?")
+    agua_almuerzo=int(input(""))
+    print("¿Cuántas veces cocina la cena a la semana?")
+    cantidad_cena=int(input(""))
+    print("¿Cuántos litros de agua utiliza para cocinar la cena?")
+    agua_cena=int(input(""))
+    total_desayuno=agua_desayuno * cantidad_desayuno
+    print("La cantidad de litros que utiliza para la preparación del desayuno es: ", total_desayuno, "litros")
+    total_almuerzo=cantidad_almuerzo * agua_almuerzo
+    print("La cantidad de litros que utiliza para la preparación del almuerzo es:", total_almuerzo, "litros")
+    total_cena=cantidad_cena * agua_cena
+    print("La cantidad de litros que utiliza para la preparación de la cena es: ", total_cena, "litros")
+    total_agua_cocina=total_desayuno + total_almuerzo + total_cena
+    print("El total de litros de agua usados para cocinar a la semana es: ",total_agua_cocina, "litros")
+    if total_agua_cocina<=126:
+        print("Esta haciendo un buen uso y cuidado del agua")
+        print("¡FELICIDADES¡ ¡ TE GANASTE UN PREMIO¡")
+    elif total_agua_cocina<=175:
+        print("Es un poco exagerado la cantidad de agua que utilizas, debes medir el agua, recuerda que el cuidado del agua es importante")
+    elif total_agua_cocina>175:
+        print("¡ESTA MAL¡ ¡USAS DEMASIADA AGUA LA PREPARACIÓN DE ALIMENTOS¡ te invitamos a nuestra capacitación sobre el cuiado del agua")
+elif(x==5):
+    print("¿Para la limpieza del hogar, ¿Cuántos litros de agua utiliza?")
+    litros_limpieza=int(input(""))
+    if litros_limpieza<20:
+        print("¡MUY BIEN¡ Según la OMS lo recomendable para la limpieza es usar entre 10 a 20 litros de agua")
+        print("¡FELICIDADES¡ ¡TE GANASTE UN PREMIO¡")
+    elif litros_limpieza<=40:
+        print("La cantidad de agua que usas está en el rango de uso cuidadoso sobre el agua, ¡OJO¡ no vayas a excederte")
+    elif litros_limpieza>40:
+        print("¡MAL¡ ¡USAS DEMASIADA AGUA PARA LA LIMPIEZA DEL HOGAR¡ Te invitamos a nuestra capacitación sobre el cuidado del agua")
+elif(x==6):
+    print("¿Cuántas veces lavas los trastes al dia?")
+    cantidad_trastes=int(input(""))
+    print("¿Y cuántos litros de agua utilizas para lavar los trastes?")
+    agua_trastes=int(input(""))
+    total_trastes=cantidad_trastes * agua_trastes
+    print("La cantidad de litros de agua que utilizas para lavar los trastes es: ", total_trastes, "litros")
+    if total_trastes<=23:
+        print("¡MUY BIEN¡ ¡TIENES UN BUEN CUIDADO DEL AGUA¡")
+        print("¡FELICIDADES¡ ¡TE GANASTE UN PREMIO¡")
+    elif total_trastes<=30:
+        print("Según la OMS, el uso recomendado de agua está entre 15 a 23 litros de agua, ¡OJO¡ no te excedas mucho")
+    elif total_trastes>30:
+        print("¡MAL¡ Es exagerado la cantidad de agua que utilizas para lavar los trastes")
+        print("Te invitamos a nuestra capacitación sobre el cuidado del agua")
+else:
+    print("fuera de rango, elija una las opciones")
